@@ -14,15 +14,23 @@
 %% TRUE : SI ON RENCONTRE A(,!)
 %% FALSE : SI L'ON RETOURNE SUR LE DÉPART ET QU'IL EST ENTOURÉ DE MURS 
 
-%% PASSE(A):-!.
+%% PASSE(A).
 
 %% PASSE (HAUT):- 
 %% PASSE (BAS):- 
 %% PASSE (GAUCHE):- 
 %% PASSE (DROITE):- 
 
-%% TROUVER_DÉPART(LAB):- 
 
+%% TROUVER UN DÉPART SUR UNE LIGNE (IE UNE LISTE)
 
+depart_ligne(d).
+depart_ligne([T|Q]):- depart_ligne(T); depart_ligne(Q). 
 
+%% OK 
+
+%% TROUVER UN DÉPART DANS UN LABYRINTHE (IE UN ENSEMBLE DE LISTES)
+
+depart([T|Q]):-depart_ligne([T|Q]).
+depart([T|Q]):- depart_ligne(T);depart_ligne(Q).
 
