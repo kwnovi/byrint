@@ -1,6 +1,6 @@
 # byrint
+Little labyrinth solver in Prolog.
 
 Authors : 
-
-benjamin.denom@ensc.fr <br/>
-lucien.varacca@ensc.fr
+* benjamin.denom@ensc.fr
+* lucien.varacca@ensc.fr
